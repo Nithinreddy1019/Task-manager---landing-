@@ -1,6 +1,5 @@
 import logoImage from  "@/assets/images/logosaas.png";
 import MenuIcon from "@/assets/icons/menu.svg";
-import { ArrowBigRight } from "lucide-react"
 
 import Image from "next/image";
 
