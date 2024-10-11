@@ -12,7 +12,7 @@ export const CallToAction = () => {
                 <Image 
                     src={helixImage}
                     alt="Helix logo"
-                    className="absolute top-6 -right-52"
+                    className="absolute -top-[164px] left-[calc(100%-140px)]"
                 />
                 <Image 
                     src={emojiStar}
