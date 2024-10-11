@@ -1,7 +1,11 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import cursorImage from "@/assets/images/cursor.png";
 import messageImage from "@/assets/images/message.png";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 export const Hero = () => {
     return (
@@ -22,20 +26,35 @@ export const Hero = () => {
                     <div className="inline-flex relative">
                         <h1 className="text-7xl font-bold tracking-tighter text-center inline-flex sm:text-9xl">One Task <br/> at a Time
                         </h1>
-                        <Image 
-                            src={cursorImage}
-                            alt="cursor"
-                            height={200}
-                            width={200}
+                        <motion.div
                             className="absolute right-[476px] top-[108px] hidden sm:inline"
-                        />
-                        <Image 
-                            src={messageImage}
-                            alt="message"
-                            height={200}
-                            width={200}
+                            drag
+                            dragSnapToOrigin
+                        >
+                            <Image 
+                                src={cursorImage}
+                                alt="cursor"
+                                height={200}
+                                width={200}
+                                className="max-w-none"
+                                draggable="false"
+                            />
+                        </motion.div>
+                        <motion.div
                             className="absolute top-[56px] left-[498px] hidden sm:inline"
-                        />
+                            drag
+                            // dragSnapToOrigin
+                            // You can remove the above rule to move them as you wish
+                        >
+                            <Image 
+                                src={messageImage}
+                                alt="message"
+                                height={200}
+                                width={200}
+                                className="max-w-none"
+                                draggable="false"
+                            />
+                        </motion.div>
                     </div>
                 </div>
                 <p className="text-center text-xl mt-8 max-w-md mx-auto">
