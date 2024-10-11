@@ -1,5 +1,7 @@
+"use client";
 
-import EcosystemIcon from "@/assets/icons/ecosystem.svg";
+import { Feature } from "./feature";
+
 
 
 const featuresList = [
@@ -30,13 +32,11 @@ export const Features = () => {
                 </div>
                 <div className="mt-16 flex flex-col sm:flex-row gap-4">
                     {featuresList.map(({ title, description }) => (
-                        <div key={title} className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1">
-                            <div className="inline-flex mx-auto size-14 bg-white text-black items-center justify-center rounded-lg">
-                                <EcosystemIcon />
-                            </div>
-                            <h3 className="mt-6 font-semibold">{title}</h3>
-                            <p className="mt-2 text-white/70">{description}</p>
-                        </div>
+                        <Feature 
+                            key={title}
+                            title={title}
+                            description={description}
+                        />
                     ))}
                 </div>
             </div>
